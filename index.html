@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <title>Home - About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #FADADD; /* Pink nude background color */
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #555;
+        }
+        nav a {
+            color: #fff;
+            padding: 1rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background: #444;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+	    padding: 10px;
+        }
+        .slides {
+            display: none;
+        }
+        .slides img {
+	    align-text: center;
+            width: 100%;
+            height: 2%;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⋆｡ﾟ☁︎｡⋆｡ Welcome to My Personal Website｡ ﾟ☾ ﾟ｡⋆ </h1>
+	<div class="slideshow-container">
+        <div class="slides">
+            <img src="image/3.jpg" alt="slide 1">
+        </div>
+        <div class="slides">
+            <img src="image/photo16.jpg" alt="slide 2">
+        </div>
+    </div>
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+    </header>
+    <nav>
+        <a href="aboutme.html">About Me</a>
+        <a href="myfamily.html">My Family</a>
+        <a href="MyHometown.html">My Hometown</a>
+        <a href="MyFriends.html">My Friends</a>
+        <a href="MyHobby.html">My Hobby</a>
+    </nav>
+    <div class="container">
+        <h2>♡₊˚Home˚₊♡</h2>
+        <p>Welcome to my personal website<3! This website is made to let you know about me, my lovely family and friends, my hobbies, as well as my pretty hometown. ENJOY!</p>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+    </div>
+    <footer class="w3-container w3-center w3-black w3-xlarge" style="padding: 8px;">
+        <a href="https://www.instagram.com/nrnstsya_?igsh=cGNqY2g3MHh6N2Q2"><i class="fa fa-instagram"></i></a>
+        <a href="https://youtube.com/@tashaiskandar8470?si=ORM_0b8TjV6rRopv"><i class="fa fa-youtube"></i></a>
+        <p class="w3-medium">
+            Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+        </p>
+        <p style="font-size:14px; color: white;">
+            Disclaimer: The content of this website is for informational purposes only.
+        </p>
+        <p style="font-size: 14px; color: white;">
+            &copy; 2024 TashaIskandar. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
